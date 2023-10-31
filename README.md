@@ -1,1 +1,1 @@
-# psychic-dollop
+# Lektionsexempel Frontend-programmering 2023
