@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+         <input type = "text" id = "namn" name = "namn"></form>
+    </form>
+    <select id = "boplats">
+        <option value = "hus"> Hus</option>
+        <option value = "tält"> Tält</option>
+        <option value = "hål i marken"> Hål i marken</option>
+    </select>
+    <br>
+    <select id = "titel">
+        <option value = "man"> Man</option>
+        <option value = "rövare"> Rövare</option>
+        <option value = "hobbit"> Hobbit</option>
+    </select>
+    <br>
+    <button id="btn" onclick = "makeStory()">Generera saga</button>
+
+    <div id="result"></div>
+
+    <script>
+        function makeStory() {
+            var namnInput = document.querySelector("#namn").value;
+            var boplatsInput = document.querySelector("#boplats").value;
+            var titelInput = document.querySelector("#titel").value;
+
+            var saga = `Det var en gång en ${titelInput} som bodde i ett ${boplatsInput} och hette ${namnInput}.`;
+
+            document.querySelector("#result").innerHTML = saga;
+        }
+    </script>
+</body>
+</html>

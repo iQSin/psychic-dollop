@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img id="jack" src="img/jack-closed-small.png">
+    </div>
+    <script>
+        var click = false;
+        
+        var jackImage = document.querySelector("#jack")
+        jackImage.addEventListener("mousedown", jackbox);
+        jackImage.addEventListener("mouseup", jackboxReset);;
+
+        function jackbox() {
+                jackImage.src = "img/jack-open-small.png";
+
+        }
+        function jackboxReset() {
+            jackImage.src = "img/jack-closed-small.png";
+        }
+    </script>
+      
+</body>
+</html>
